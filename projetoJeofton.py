@@ -1,4 +1,4 @@
-tarefas = [] 
+tarefas = []  
 
 def adicionar_tarefa(descricao):
     tarefa = {"descricao": descricao, "concluida": False}
