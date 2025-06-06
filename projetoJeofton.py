@@ -14,29 +14,3 @@ def listar_tarefas():
         status = "Concluída" if tarefa["concluida"] else "Pendente"
         print(f"{i}. {tarefa['descricao']} - {status}")
 
-def marcar_concluida(indice):
-    if 1 <= indice <= len(tarefas):
-        tarefas[indice-1]["concluida"] = True
-        print(f"Tarefa '{tarefas[indice-1]['descricao']}' marcada como concluída!")
-    else:
-        print("Índice inválido!")
-
-def remover_tarefa(indice):
-    if 1 <= indice <= len(tarefas):
-        tarefa_removida = tarefas.pop(indice-1)
-        print(f"Tarefa '{tarefa_removida['descricao']}' removida com sucesso!")
-    else:
-        print("Índice inválido!")
-    if opcao == "1":
-            descricao = input("Digite a descrição da tarefa: ")
-            adicionar_tarefa(descricao)
-    elif opcao == "2":
-            listar_tarefas()
-    elif opcao == "3":
-            listar_tarefas()
-        try:
-                indice = int(input("Digite o número da tarefa a marcar como concluída: "))
-                marcar_concluida(indice)
-        except ValueError:
-                print("Por favor, digite um número válido!")
-        
