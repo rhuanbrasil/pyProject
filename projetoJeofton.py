@@ -27,3 +27,16 @@ def remover_tarefa(indice):
         print(f"Tarefa '{tarefa_removida['descricao']}' removida com sucesso!")
     else:
         print("Índice inválido!")
+    if opcao == "1":
+            descricao = input("Digite a descrição da tarefa: ")
+            adicionar_tarefa(descricao)
+    elif opcao == "2":
+            listar_tarefas()
+    elif opcao == "3":
+            listar_tarefas()
+        try:
+                indice = int(input("Digite o número da tarefa a marcar como concluída: "))
+                marcar_concluida(indice)
+        except ValueError:
+                print("Por favor, digite um número válido!")
+        
