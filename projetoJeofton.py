@@ -49,3 +49,17 @@ def menu():
                 marcar_concluida(indice)
             except ValueError:
                 print("Por favor, digite um número válido!")
+        elif opcao == "4":
+            listar_tarefas()
+            try:
+                indice = int(input("Digite o número da tarefa a remover: "))
+                remover_tarefa(indice)
+            except ValueError:
+                print("Por favor, digite um número válido!")
+        elif opcao == "5":
+            print("Saindo do sistema...")
+            break
+        else:
+            print("Opção inválida! Tente novamente.")
+
+menu()
